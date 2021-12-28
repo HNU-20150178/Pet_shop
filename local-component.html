@@ -10,13 +10,14 @@
             </my-component>
         </div>
         <script>
-            Vue.component('my-component',{
-                template: '<div>안녕, 전역 컴포넌트로부터</div>'
-            });
+            const Component = {
+                template: '<div>안녕, 지역 컴포넌트로부터</div>'
+            }
 
             new Vue({
-                el: "#app"
-            })
+                el: "#app",
+                components : {'my-component':Component}
+            });
         </script>
     </body>
 </html>

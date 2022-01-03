@@ -6,7 +6,7 @@
 </head>
 <body>
   <div id="app">
-    <my-component :my-info="message" inline-template>
+    <my-component v-bind:my-info="message" inline-template> <!-- inline템플릿은나머지 컴포넌트 정의에서 템플릿을 분리한다.-->
       <div>
           <p>
             inline-template - {{myInfo}}
